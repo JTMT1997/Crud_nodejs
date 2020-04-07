@@ -1,0 +1,30 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/mahasiswa" method="post" autocomplete="off">
+<input type="hidden" name="_id" value="{{mahasiswa._id}}">
+  <div class="form-group">
+    <label> Nama </label>
+    <input type="text" class="form-control" name="nama" placeholder="Nama" value="{{mahasiswa.nama}}" >
+  </div>
+  <div class="form-group">
+    <label> Tempat Tanggal Lahir </label>
+    <input type="text" class="form-control" name="ttl" placeholder="Tempat Tanggal Lahir" value="{{mahasiswa.ttl}}">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label> Alamat </label>
+      <input type="text" class="form-control" name="alamat" placeholder="Alamat" value="{{mahasiswa.alamat}}">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Jenis Kelamin</label>
+      <input type="text" class="form-control" name="jeniskelamin" placeholder="Jenis Kelamin" value="{{mahasiswa.jeniskelamin}}">
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-info">
+      <i class="fa fa-database"form=""></i>
+      Submit </button>
+  <a class="btn btn-info" href="/mahasiswa/list"><i class="fa fa-list-alt"></i>
+    View All </a>
+  </div>
+</form>

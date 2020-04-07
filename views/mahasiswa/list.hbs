@@ -1,0 +1,26 @@
+<h3> <a class="btn btn-secondary" href="/mahasiswa"><i class="fa fa-plus"></i> Create New</a> Employee List</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th> Nama </th>
+      <th> Tempat Tanggal Lahir </th>
+      <th> Alamat </th>
+      <th> Jenis Kelamin </th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each list}}
+    <tr>
+        <td>{{this.nama}}</td>
+        <td>{{this.ttl}}</td>
+        <td>{{this.alamat}}</td>
+        <td>{{this.jeniskelamin}}</td>
+        <td>
+            <a href="/mahasiswa/{{this._id}}">Edit<i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+            <a href="/mahasiswa/delete/{{this._id}}" onclick="return confirm('Do you really want to delete?');">Delete<i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+        </td>
+    <tr>
+    {{/each}}
+  </tbody>
+</table>
